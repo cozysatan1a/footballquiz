@@ -11,7 +11,7 @@
     android:background="@color/white"
     >
     <TextView
-
+        android:id="@+id/tx_questionNumber"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -22,6 +22,7 @@
     
     
     <TextView
+        android:id="@+id/tx_question"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -37,9 +38,10 @@
         android:layout_weight="40"
         app:cardCornerRadius="12dp">
         <ImageView
+            android:id="@+id/img_questionImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/r9"
+
             android:scaleType="fitXY"/>
     </androidx.cardview.widget.CardView>
     <View
@@ -47,7 +49,8 @@
         android:layout_height="0dp"
         android:layout_weight="5"/>
     
-    <TextView
+    <Button
+        android:id="@+id/btn_optA"
         android:background="@drawable/btn_option_unselected"
         android:layout_marginVertical="4dp"
         android:layout_width="match_parent"
@@ -58,8 +61,12 @@
         android:text="Option A"
         android:gravity="center"
         android:textColor="@color/white"
+        app:backgroundTint="@null"
+        android:textAllCaps="false"
         />
-    <TextView
+    <Button
+        android:id="@+id/btn_optB"
+        android:textAllCaps="false"
         android:background="@drawable/btn_option_unselected"
         android:layout_marginVertical="4dp"
         android:layout_width="match_parent"
@@ -70,8 +77,11 @@
         android:text="Option B"
         android:gravity="center"
         android:textColor="@color/white"
+        app:backgroundTint="@null"
         />
-    <TextView
+    <Button
+        android:id="@+id/btn_optC"
+        android:textAllCaps="false"
         android:background="@drawable/btn_option_unselected"
         android:layout_marginVertical="4dp"
         android:layout_width="match_parent"
@@ -82,8 +92,11 @@
         android:text="Option C"
         android:gravity="center"
         android:textColor="@color/white"
+        app:backgroundTint="@null"
         />
-    <TextView
+    <Button
+        android:id="@+id/btn_optD"
+        android:textAllCaps="false"
         android:background="@drawable/btn_option_unselected"
         android:layout_marginVertical="4dp"
         android:layout_width="match_parent"
@@ -94,15 +107,19 @@
         android:text="Option D"
         android:gravity="center"
         android:textColor="@color/white"
+        app:backgroundTint="@null"
         />
     <Button
+        android:id="@+id/btn_submit"
         android:layout_marginTop="5dp"
         android:layout_gravity="center"
         android:layout_width="120dp"
         android:layout_height="0dp"
         android:layout_weight="8"
         android:text="Submit"
-        android:background="@drawable/btn_submit"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="@drawable/btn_option_selected"
         app:backgroundTint="@null"/>
 
 
