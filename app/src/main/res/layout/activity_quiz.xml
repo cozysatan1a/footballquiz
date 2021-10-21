@@ -8,8 +8,10 @@
     android:orientation="vertical"
     tools:context=".QuizActivity"
     android:padding="12dp"
+    android:background="@color/white"
     >
     <TextView
+
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -23,7 +25,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="10"
+        android:layout_weight="7"
         android:text="What is his name?"
         android:textSize="14sp"
         android:textColor="@color/black"/>
@@ -46,7 +48,7 @@
         android:layout_weight="5"/>
     
     <TextView
-        android:background="@drawable/btn_option"
+        android:background="@drawable/btn_option_unselected"
         android:layout_marginVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -55,9 +57,10 @@
         android:orientation="horizontal"
         android:text="Option A"
         android:gravity="center"
+        android:textColor="@color/white"
         />
     <TextView
-        android:background="@drawable/btn_option"
+        android:background="@drawable/btn_option_unselected"
         android:layout_marginVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -66,9 +69,10 @@
         android:orientation="horizontal"
         android:text="Option B"
         android:gravity="center"
+        android:textColor="@color/white"
         />
     <TextView
-        android:background="@drawable/btn_option"
+        android:background="@drawable/btn_option_unselected"
         android:layout_marginVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -77,9 +81,10 @@
         android:orientation="horizontal"
         android:text="Option C"
         android:gravity="center"
+        android:textColor="@color/white"
         />
     <TextView
-        android:background="@drawable/btn_option"
+        android:background="@drawable/btn_option_unselected"
         android:layout_marginVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -88,8 +93,17 @@
         android:orientation="horizontal"
         android:text="Option D"
         android:gravity="center"
+        android:textColor="@color/white"
         />
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:text="Submit"
+        android:background="@drawable/btn_submit"
+        app:backgroundTint="@null"/>
 
-    
 
 </LinearLayout>
