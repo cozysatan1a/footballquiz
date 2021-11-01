@@ -1,5 +1,6 @@
 package com.example.intent
 
+import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,13 +20,14 @@ lateinit var binding: ActivityQuizBinding
     var mQuestionList : ArrayList<quizData>? = null
     var mSelectedOptionPosition : Int = 0
     var buttonCheckSelected : Boolean = false
+    var mScore : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuizBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        val ss : String = intent.getStringExtra("send data").toString()
+        val mName : String = intent.getStringExtra("send data").toString()
 
         val quizQuestion = Constants.getQuestion()
         Log.i("question size",  "${quizQuestion.size}")
@@ -76,12 +78,18 @@ lateinit var binding: ActivityQuizBinding
                     binding.btnSubmit.isEnabled = false
                 }
                 else {
-                    Toast.makeText(this, "Quiz completed", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, ResultActivity::class.java)
+                    val bundle = Bundle()
+                    bundle.putString("name", mName)
+                    bundle.putString("score", mScore.toString())
+                    intent.putExtra("bundle", bundle)
+                    startActivity(intent)
+                    finish()
                 }
 
             }
             else {
-                Toast.makeText(this, "$mSelectedOptionPosition", Toast.LENGTH_SHORT).show()
+
                 val question = mQuestionList!![mCurrentPosition - 1]
                 if (mSelectedOptionPosition != question.optTrue) {
                     correctOptionView(mSelectedOptionPosition, R.drawable.btn_option_selected_wrong)
@@ -89,6 +97,7 @@ lateinit var binding: ActivityQuizBinding
                 }
                 else {
                     correctOptionView(mSelectedOptionPosition, R.drawable.btn_option_selected_correct)
+                    mScore ++
                 }
                 if (mCurrentPosition == mQuestionList!!.size) {
                     binding.btnSubmit.text = "FINISH"
@@ -99,6 +108,12 @@ lateinit var binding: ActivityQuizBinding
             }
 
         }
+
+
+
+
+
+
         }
     private fun setQuestion(position : Int = 1 ) {
         mCurrentPosition = position
@@ -113,6 +128,7 @@ lateinit var binding: ActivityQuizBinding
         defaultOptionView()
 
     }
+
     private fun defaultOptionView() {
         mSelectedOptionPosition = 0
         val options = ArrayList<Button>()

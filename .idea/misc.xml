@@ -13,6 +13,9 @@
         <entry key="app/src/main/res/layouts/drawable/btn_color_selector.xml" value="0.28055555555555556" />
         <entry key="app/src/main/res/layouts/drawable/btn_option.xml" value="0.2388888888888889" />
         <entry key="app/src/main/res/layouts/drawable/btn_option_selected.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layouts/drawable/btn_option_selected_correct.xml" value="0.2046875" />
+        <entry key="app/src/main/res/layouts/drawable/btn_option_selected_wrong.xml" value="0.18958333333333333" />
+        <entry key="app/src/main/res/layouts/drawable/btn_option_unselected.xml" value="0.2046875" />
         <entry key="app/src/main/res/layouts/drawable/btn_submit.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/res/drawable-v24/ic_launcher_foreground.xml" value="0.3" />
         <entry key="app/src/main/res/res/drawable/ic_launcher_background.xml" value="0.3" />
