@@ -1,5 +1,6 @@
 package com.example.intent
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.intent.databinding.ActivityResultBinding
@@ -15,6 +16,11 @@ class ResultActivity : AppCompatActivity() {
         val mName = bundle?.getString("name", "a")
         val mScore = bundle?.getString("score","0/10")
         setResult(mName!!, mScore!!)
+        binding.btnResultMainMenu.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
     }
 }
